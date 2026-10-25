@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini Expert System</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <h1 id="app-title">Mini Expert System</h1>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="ar" aria-pressed="false">العربية</button>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="pick-title" class="domains">
+      <h2 id="pick-title" class="sr-only"></h2>
+      <div id="domain-list" class="domain-list" role="radiogroup"></div>
+      <p id="domain-intro" class="intro"></p>
+    </section>
+
+    <div class="stage">
+      <section id="dialogue" class="panel" aria-live="polite"></section>
+      <aside class="panel gauge" aria-labelledby="gauge-title">
+        <h2 id="gauge-title"></h2>
+        <ul id="gauge-list" class="gauge-list"></ul>
+        <p id="gauge-empty" class="muted"></p>
+      </aside>
+    </div>
+  </main>
+
+  <footer><p id="disclaimer" class="muted"></p></footer>
+  <script src="/app.js"></script>
+</body>
+</html>
